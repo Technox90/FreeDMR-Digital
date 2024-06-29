@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Define the cron jobs
+CRON_JOB2="2,58 * * * * bash /home/pi-star/updatewpsd"
+CRON_JOB3=" \n @reboot bash /home/pi-star/updatewpsd " 
+
+# Get the current user's crontab
+CRONTAB=$(crontab -l 2>/dev/null)
+
+# Add the new cron jobs if they are not already in the crontab
+(echo "$CRONTAB" | grep -Fxq "@reboot bash /home/pi-star/updatewpsd") || (echo "$CRONTAB"; echo "@reboot bash /home/pi-star/updatewpsd") | crontab -
+(echo "$CRONTAB" | grep -Fxq "$CRON_JOB2") || (echo "$CRONTAB"; echo "$CRON_JOB2") | crontab -
+(echo "$CRONTAB" | grep -Fxq "$CRON_JOB3") || (echo "$CRONTAB"; echo "$CRON_JOB3") | crontab -
+
+exit 0

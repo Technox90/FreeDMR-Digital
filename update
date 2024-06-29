@@ -13,9 +13,8 @@ UURL="https://freedmr.d06fth.de"
 CHDIR="$UPDIR $TMPDIR $HOMEDIR $LLDIR"
 
 # Berechtigungen setzen
-sudo chmod 775 -R "$UPDIR $TMPDIR $HOMEDIR $LLDIR"
-sudo chmod 777 -R /root /usr/local/etc
-sudo chown pi-star:pi-star -R "$UPDIR $TMPDIR $HOMEDIR $LLDIR"
+sudo chmod 777 -R /root /usr/local /home/pi-star /tmp
+sudo chown pi-star:pi-star -R /home/pi-star /tmp
 sudo mkdir "$LOGDIR"
 
 # Funktion für die Ausgabe des Headers mit Formatierung

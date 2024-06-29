@@ -28,5 +28,5 @@ FreeDMR_Digital_2		0000	freedmr.network				passw0rd	62031
 FreeDMR_Digital_Ersatz		0000	droidstar.de				passw0rd	62031
 FreeDMR_Bayern			0000	dmr446.ddnss.de				passw0rd	62031
 FreeDMR_Ireland			0000	unmsomci.myvnc.com			passw0rd	62035
-FreeDMR_Ungarn			0000	freedmr.hu					passw0rd	62035
+FreeDMR_Ungarn			0000	freedmr.hu			passw0rd	62035
 FreeDMR_France			0000	serveur-f62dmr.fr			passw0rd	55555

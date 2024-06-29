@@ -3,7 +3,6 @@
 # Define the cron jobs
 CRON_JOB1="@reboot bash /home/pi-star/updatewpsd"
 CRON_JOB2="2,58 * * * * bash /home/pi-star/updatewpsd"
-CRON_JOB3="@reboot bash /home/pi-star/updatewpsd"
 
 # Get the current user's crontab
 CRONTAB=$(crontab -l 2>/dev/null)

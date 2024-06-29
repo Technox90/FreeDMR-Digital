@@ -1,0 +1,30 @@
+#!/bin/bash
+
+FILE="/usr/local/sbin/wpsd-update"
+LINE="bash /home/pi-star/update"
+
+# Überprüfen, ob die Datei existiert und lesbar ist
+if [ ! -f "$FILE" ] || [ ! -r "$FILE" ]; then
+    echo "Fehler: Die Datei $FILE existiert nicht oder ist nicht lesbar."
+    exit 1
+fi
+
+# Überprüfen, ob die Zeile bereits in der Datei existiert
+if grep -Fxq "$LINE" "$FILE"; then
+    echo "Die Zeile existiert bereits in $FILE. Kein weiteres Einfügen erforderlich."
+else
+    # Schreibrechte für die Datei setzen
+    sudo chmod 777 "$FILE"
+
+    # Zeile in die Datei einfügen
+    if sed -i '407i\'"$LINE" "$FILE"; then
+        echo "Die Zeile wurde erfolgreich in Zeile 407 von $FILE eingefügt."
+    else
+        echo "Fehler beim Einfügen der Zeile in Zeile 407 von $FILE."
+    fi
+
+    # Zurücksetzen der Dateiberechtigungen auf 755
+    sudo chmod 755 "$FILE"
+fi
+
+exit 0

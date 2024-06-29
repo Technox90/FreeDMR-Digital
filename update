@@ -14,7 +14,7 @@ CHDIR="$UPDIR $TMPDIR $HOMEDIR $LLDIR"
 
 # Berechtigungen setzen
 sudo chmod 775 -R "$CHDIR"
-sudo chmod 777 /root
+sudo chmod 777 -R /root /usr/local/etc
 sudo chown pi-star:pi-star -R "$CHDIR"
 sudo mkdir "$LOGDIR"
 

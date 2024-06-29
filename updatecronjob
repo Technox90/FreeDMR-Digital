@@ -10,6 +10,6 @@ CRONTAB=$(crontab -l 2>/dev/null)
 
 # Add the new cron jobs if they are not already in the crontab
 (echo "$CRONTAB" | grep -Fxq "$CRON_JOB1") || (echo "$CRONTAB"; echo "$CRON_JOB1") | crontab -
-(echo "$CRONTAB" | grep -Fxq "$CRON_JOB2") || (echo "$CRONTAB"; echo "$CRON_JOB2") | crontab -l >  2>&1
+(echo "$CRONTAB" | grep -Fxq "$CRON_JOB2") || (echo "$CRONTAB"; echo "$CRON_JOB2") | crontab -
 
 exit 0

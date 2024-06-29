@@ -1,15 +1,15 @@
+
 #!/bin/bash
 
 # Define the cron jobs
 CRON_JOB1="@reboot bash /home/pi-star/updatewpsd"
 CRON_JOB2="2,58 * * * * bash /home/pi-star/updatewpsd"
 
-# Get the current root crontab
-CRONTAB=$(sudo crontab -l 2>/dev/null)
+# Get the current user's crontab
+CRONTAB=$(crontab -l 2>/dev/null)
 
 # Add the new cron jobs if they are not already in the crontab
-(echo "$CRONTAB" | grep -Fxq "$CRON_JOB1") || CRONTAB="$CRONTAB"$'\n'"$CRON_JOB1"
-(echo "$CRONTAB" | grep -Fxq "$CRON_JOB2") || CRONTAB="$CRONTAB"$'\n'"$CRON_JOB2"
+(echo "$CRONTAB" | grep -Fxq "$CRON_JOB1") || (echo "$CRONTAB"; echo "$CRON_JOB1") | crontab -
+(echo "$CRONTAB" | grep -Fxq "$CRON_JOB2") || (echo "$CRONTAB"; echo "$CRON_JOB2") | crontab -l >  2>&1
 
-# Install the new crontab
-echo "$CRONTAB" | sudo crontab -
+exit 0

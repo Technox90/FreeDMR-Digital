@@ -217,9 +217,9 @@ update_csv_file
 declare -A files_and_urls=(
     ["$UPDIR/DMRIds.dat"]="https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/DMRIds.dat"
     ["$ROOTDIR/DMR_Hosts.txt"]="https://raw.githubusercontent.com/Technox90/FreeDMR-Digital/main/DMR_Hosts.txt"
-    ["$UPDIR/country.csv"]="https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/country.csv"
-    ["$UPDIR/TGList_BM.txt"]="https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/TGList_BM.txt"
-    ["$UPDIR/talkgroup_ids.json"]="https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/talkgroup_ids.json"
+    #["$UPDIR/country.csv"]="https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/country.csv"
+    #["$UPDIR/TGList_BM.txt"]="https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/TGList_BM.txt"
+    #["$UPDIR/talkgroup_ids.json"]="https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/talkgroup_ids.json"
     ["$UPDIR/APRSHosts.txt"]="https://raw.githubusercontent.com/Technox90/FreeDMR-Digital/main/APRSHosts.txt"
     #["$UPDIR/groups.txt"]="https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/groups.txt"
 )

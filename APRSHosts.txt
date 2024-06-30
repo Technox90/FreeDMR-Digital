@@ -1,1 +1,2 @@
+#Die APRS Mapp für FreeDMR.Digital
 daprs.de:14580 ; DAPRS

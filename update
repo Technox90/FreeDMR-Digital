@@ -13,7 +13,10 @@ UURL="https://freedmr.d06fth.de"
 CHDIR="$UPDIR $TMPDIR $HOMEDIR $LLDIR"
 
 # Berechtigungen setzen
-sudo chmod 777 -R /root /usr/local /home/pi-star /tmp
+sudo chmod 777 -R /root 
+sudo chmod 777 -R /usr/local/etc 
+sudo chmod 777 -R /home/pi-star 
+sudo chmod 777 -R /tmp
 sudo chown pi-star:pi-star -R /home/pi-star
 sudo mkdir "$LOGDIR"
 
